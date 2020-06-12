@@ -11,3 +11,10 @@
 
 // Q3.3
 // Would this work with more integers?
+
+function max(...args) {
+  console.log(`${Math.max(...args)} is the largest!`);
+}
+
+// Call the function
+max(12, 43, 4, 6, 10, 20, 50);
