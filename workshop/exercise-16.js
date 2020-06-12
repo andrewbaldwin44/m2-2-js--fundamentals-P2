@@ -10,6 +10,17 @@
 
 let armstrongNumbers = [];
 
-// write your loop here...
+function isArmstrong(number) {
+  let digit_sum =
+    [...number].reduce((sum, digit) => {
+        return sum += Math.pow(Number(digit), number.length);
+    }, 0);
+
+  return digit_sum == number;
+}
+
+for (let number = 0; number <= 999; number++) {
+  if (isArmstrong(number.toString())) armstrongNumbers.push(number);
+}
 
 console.log(armstrongNumbers);
